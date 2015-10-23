@@ -27,7 +27,6 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import com.yammer.dropwizard.validation.DurationRange.List;
 
 @XmlRootElement(name="Customer")
 public class Customer {

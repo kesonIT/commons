@@ -36,11 +36,11 @@ import javax.xml.bind.Unmarshaller;
 public final class XMLParser {
 	private XMLParser() {}  
     
-	 public static Object unmarshal(String str, Class<?> clazz) {  
+	 public static Object unmarshal(String xml, Class<?> clazz) {  
 	        Object obj = null;  
 	        try{
 	        	JAXBContext jc = JAXBContext.newInstance(clazz);
-	        	 StringReader reader = new StringReader(str);  
+	        	 StringReader reader = new StringReader(xml);  
 	        	 obj = jc.createUnmarshaller().unmarshal(reader);  
 	        } catch (JAXBException e) {  
 	            throw new RuntimeException("Can't unmarshal the XML file, error message: " + e.getMessage());  

@@ -35,7 +35,7 @@ import com.cloudaxis.jaxb.XMLParser;
 public class Test {
 
 	public static void main(String[] args) throws FileNotFoundException {
-		 new Test().test();
+		 new Test().unserialize();
 	/*	new Test().unserialize();
 		new Test().serializes();
 		new Test().unserializes();*/
@@ -69,13 +69,13 @@ public class Test {
 	      customer.name="zzz";
 	      customer.age = 23;
 	 	 Customer customer1 = new Customer();
-	      customer.id=1001;
-	      customer.name="zzz1";
-	      customer.age = 231;
+	      customer1.id=1001;
+	      customer1.name="zzz1";
+	      customer1.age = 231;
 	      List<Customer> list  = new ArrayList<Customer>();
 	      Customers cs = new Customers();
-	      list.add(customer1);
 	      list.add(customer);
+	      list.add(customer1);
 	      cs.customer = list;
 	      File file = new File("customers.xml");
 	     boolean key = XMLParser.marshal(cs, Customers.class,file);

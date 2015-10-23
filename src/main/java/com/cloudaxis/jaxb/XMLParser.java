@@ -48,7 +48,7 @@ public final class XMLParser {
 	        return obj;  
 	    }  
    
-    public static Object unmarshal(File file, Class<?> clazz) {  
+	public static Object unmarshal(File file, Class<?> clazz) {  
         Object obj = null;  
         try {  
         	FileInputStream xml = null;

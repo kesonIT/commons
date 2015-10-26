@@ -86,13 +86,12 @@ public final class XMLParser {
 
 	/**
 	 * @param obj
-	 * @param clazz
 	 * @param file
 	 * @return marshal Object to XML File
 	 */
-	public static boolean marshal(Object obj, Class<?> clazz, File file) {
+	public static boolean marshal(Object obj,File file) {
 		try {
-			JAXBContext jc = JAXBContext.newInstance(clazz);
+			JAXBContext jc = JAXBContext.newInstance(obj.getClass());
 			Marshaller m = jc.createMarshaller();
 			m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 			m.marshal(obj, file);
@@ -106,13 +105,12 @@ public final class XMLParser {
 
 	/**
 	 * @param obj
-	 * @param clazz
 	 * @return marshal Object to XML String
 	 */
-	public static String marshal(Object obj, Class<?> clazz) {
+	public static String marshal(Object obj) {
 		String result = null;
 		try {
-			JAXBContext jc = JAXBContext.newInstance(clazz);
+			JAXBContext jc = JAXBContext.newInstance(obj.getClass());
 			Marshaller m = jc.createMarshaller();
 			m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 			StringWriter writer = new StringWriter();

@@ -16,7 +16,7 @@
 		</layout>
 	</appender>
 
-	<logger name="com.cloudaxis.usage" level="ERROR" />
+	<logger name="com.cloudaxis.usage" level="INFO" />
 
 
 	<root level="info">

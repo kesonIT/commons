@@ -7,17 +7,12 @@
  *
  ***************************************************************************/
 
-package com.cloudaxis.test;
-
-import java.util.List;
-
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
+package com.cloudaxis.jaxb.test;
 
 /***************************************************************************
  *<PRE>
  * 
- *  Creation Date   : Oct 23, 2015
+ *  Creation Date   : Oct 22, 2015
  * 
  *  Author          : steven
  * 
@@ -28,10 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
  * 
  *</PRE>
  ***************************************************************************/
-@XmlRootElement(name="customers")
-public class Customers {
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "Customer")
+public class Customer {
 	@XmlElement
-	 List<Customer> customer ;
-	
-	
+	String name;
+	@XmlElement
+	int age;
+	@XmlElement
+	int id;
+
 }
